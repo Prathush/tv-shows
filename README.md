@@ -3,7 +3,7 @@
 TV shows application consists of the following screens:
 1) Shows list (Default) - displays list of shows categorized by genres and sorted by respective rating. We can search for TV shows with name inside search input field
 2) Show details - displays details of respective show such as genres, language, rating and run time
-3) Error - user will be navigted to error page in case of network issues or other issues which were caused during display of shows
+3) Error - user will be navigated to error page in case of network issues or other issues which were caused during display of shows
 
 - Application routing can be found in app-routing.module.ts
 
