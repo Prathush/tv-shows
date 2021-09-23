@@ -1,0 +1,11 @@
+<p-carousel [value]="shows" [numVisible]="5" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+    <ng-template let-show pTemplate="item">
+        <div class="show-item">
+            <div class="show-item-content">
+                <div class="p-mb-3">
+                    <img [src]="show.image.medium" [alt]="show.name" class="show-image" (click)="onImageClick(show)" />
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container" *ngIf="displayShowDetails()">
+    <h2 class="mb-4">{{show.name}}</h2>
+    <div class="row">
+        <p class="col-6">
+            <img [src]="show.image.original" class="img-fluid" alt="show.name}}">
+        </p>
+        <div class="col-6">
+            <div class="mb-4">
+                <h3>Genres</h3>
+                <ul class="list-group ml-5">
+                    <li class="list-group-item" *ngFor="let genre of show.genres">
+                        {{genre}}
+                    </li>
+                </ul>
+            </div>
+            <h5>Language: <span class="badge bg-info">{{show.language}}</span></h5>
+            <h5>Rating: <span class="badge bg-success">{{show.rating.average}}</span>
+            </h5>
+            <h5>Run time: <span class="badge bg-warning">{{show.runtime}} mins</span></h5>
+
+            <h5>Summary</h5>
+            <p class="card-text" [innerHTML]="show.summary"></p>
+            <h5><a href="{{show.url}}" target="_blank">Go to the official
+                    site</a></h5>
+            <div class="mt-5 mb-5">
+                <button class="btn btn-primary" (click)="navigateBack()">Go Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

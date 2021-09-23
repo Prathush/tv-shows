@@ -1,0 +1,39 @@
+<app-header></app-header>
+<ng-container>
+    <section *ngIf="finalShowsList$ | async as finalShowsList else finalShowsListSpinner">
+        <div class="container" *ngIf="genresList$ | async as genresList else genresListSpinner">
+            <div class="row mt-2 mb-4" *ngFor="let genre of genresList">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="h5">
+                                {{genre}}
+                            </span>
+                            <span>
+                                ({{getNumberOfShows(finalShowsList[genre])}} shows)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <app-shows-carousel [shows]="finalShowsList[genre]"></app-shows-carousel>
+            </div>
+        </div>
+        <ng-template #genresListSpinner>
+            <app-spinner></app-spinner>
+        </ng-template>
+    </section>
+    <ng-template #finalShowsListSpinner>
+        <app-spinner></app-spinner>
+    </ng-template>
+    <section *ngIf="noShowsFound$ | async">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-warning" role="alert">
+                        Apologies, No Shows found
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>

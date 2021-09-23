@@ -1,0 +1,16 @@
+.show-item {
+    .show-item-content {
+        border-radius: 3px;
+        margin: .3rem;
+    }
+}
+
+@media (min-width:100px){
+    :host ::ng-deep .p-carousel-indicators{
+        display: none !important;
+    }
+}
+
+img{
+    cursor: pointer;
+}
