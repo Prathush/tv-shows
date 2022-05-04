@@ -3,7 +3,8 @@
         <div class="show-item">
             <div class="show-item-content">
                 <div class="p-mb-3">
-                    <img [src]="show.image.medium" [alt]="show.name" class="show-image" (click)="onImageClick(show)" />
+                    <img [src]="show.image.medium" [alt]="show.name" class="show-image" (click)="onImageClick(show)"
+                        loading="lazy" />
                 </div>
             </div>
         </div>

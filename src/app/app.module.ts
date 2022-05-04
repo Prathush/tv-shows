@@ -14,6 +14,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ShowDetailsComponent } from './components/show-details/show-details.component';
 import { ShowsListComponent } from './components/shows-list/shows-list.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { LazyImageLoaderDirective } from './directives/lazy-image-loader/lazy-image-loader.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     ShowsCarouselComponent,
     ShowDetailsComponent,
     SpinnerComponent,
+    LazyImageLoaderDirective,
   ],
   imports: [
     BrowserModule,
